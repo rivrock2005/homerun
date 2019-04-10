@@ -21,6 +21,11 @@ class ProductsController < ApplicationController
   def edit
   end
 
+  def product_params
+  params.require(:product).permit(:name, :description, :image_url, :color)
+end
+
+
   # POST /products
   # POST /products.json
   def create
