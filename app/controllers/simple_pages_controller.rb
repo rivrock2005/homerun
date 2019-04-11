@@ -4,4 +4,7 @@ class SimplePagesController < ApplicationController
 
   def contact
   end
+
+  def Products
+  end
 end
