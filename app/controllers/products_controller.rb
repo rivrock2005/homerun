@@ -1,10 +1,10 @@
-class ProductsController < ApplicationController
+  class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    @products = Product.limit(3)
   end
 
   # GET /products/1

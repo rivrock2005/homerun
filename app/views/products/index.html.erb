@@ -5,6 +5,7 @@
 <div class="container-fluid">
   <div class="row">
     <% @products.each do |product| %>
+
       <div class="col-xs-12 col-md-3 col-box">
     <div class="card product-show shadow my-3 bg-white rounded">
       <img><%= image_tag(product.image_url, class: "card-img-top img-fluid") %></img>
@@ -17,9 +18,19 @@
 
         <li class="list-group-item"><strong><%= number_to_currency(product.price, class:"price")%></strong></li>
       </ul>
-      
+
     </div>
   </div>
     <% end %>
-  </div>
+    </div>
+
+    <div class="row">
+  <% @products.each do |product| %>
+    <div class="col-sm">
+      <h1><%= link_to product.name, product %></h1>
+      <p><%= product.description %></p>
+      <strong>$ <%= product.price %></strong>
+    </div><!-- /col -->
+  <% end %>
+</div>
 </div>
