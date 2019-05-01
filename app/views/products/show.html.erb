@@ -20,7 +20,7 @@
   <%= @product.price%>
 </p>
 
-    <img><%= image_tag(@product.image_url,  class: "card-img-top img-fluid") %></img>
+  <img><%= image_tag(@product.image_url, class: "img-responsive center")if @product.image_url.present?%></img>
 
 
 
