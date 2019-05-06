@@ -3,10 +3,21 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 h1 {
   color: red;
+  padding-left: 455px;
 }
 h2 {
   color: blue;
+  text-align: center;
 }
 body {
   background-color: beige;
 }
+.carousel-inner img {
+  padding-left: 425px;
+  padding-bottom: 40px;
+}
+.links {
+  display: inline;
+  float: left;
+  margin: 5px;
+  }
