@@ -3,15 +3,13 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 h1 {
   color: red;
-  padding-left: 455px;
+  text-align: center;
 }
 h2 {
   color: blue;
   text-align: center;
 }
-body {
-  background-color: beige;
-}
+
 .carousel-inner img {
   padding-left: 425px;
   padding-bottom: 40px;
@@ -21,3 +19,11 @@ body {
   float: left;
   margin: 5px;
   }
+  .about2 {
+    font-size: 2em;
+    text-align: center;
+  }
+  html body {
+    background-color: beige;
+  }
+
