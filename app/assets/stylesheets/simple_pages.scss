@@ -6,7 +6,7 @@ h1 {
   text-align: center;
 }
 h2 {
-  color: blue;
+  color: white;
   text-align: center;
 }
 
@@ -14,23 +14,18 @@ h2 {
   padding-left: 425px;
   padding-bottom: 40px;
 }
-.links {
-  display: inline;
-  float: left;
-  margin: 5px;
-  }
+
   .about2 {
     font-size: 2em;
     text-align: center;
+    color: white;
   }
-  html body {
-    background-color: beige;
-  }
+  //body {
+  //  background-image: url("../img/river.jpg")
+  //}
   .carousel-control {
     background-image: none !important;
   }
   .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right {
   color: red;
 }
-
-
