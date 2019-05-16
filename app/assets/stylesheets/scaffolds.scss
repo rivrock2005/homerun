@@ -20,7 +20,7 @@ p {
 footer {
   position: absolute;
   left: 0px;
-  bottom: 0px;
+  bottom: -25px;
   color: white;
 
 }
@@ -65,7 +65,7 @@ div {
 }
 
 #notice {
-  color: green;
+  color: white;
 }
 
 .field_with_errors {
@@ -95,7 +95,7 @@ div {
     font-size: 12px;
     list-style: square;
   }
-}
+
 
 label {
   display: block;
@@ -104,7 +104,6 @@ label {
 .navbar-expand-lg {
   background-color: rgba(255,255,255,0.5);
   font-weight: bold;
-
 }
 
 .links {
@@ -112,5 +111,4 @@ label {
   float: left;
   margin: 5px;
   color: black;
-
   }
