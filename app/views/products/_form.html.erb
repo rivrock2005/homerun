@@ -1,14 +1,14 @@
-<%= form_with(model: product, local: true) do |form| %>
+  <%= form_with(model: product, local: true) do |form| %>
   <% if product.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+  <div id="error_explanation">
+    <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
 
-      <ul>
+    <ul>
       <% product.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+      <li><%= message %></li>
       <% end %>
-      </ul>
-    </div>
+    </ul>
+  </div>
   <% end %>
 
   <div class="field">
@@ -16,20 +16,12 @@
     <%= form.text_field :name %>
   </div>
 
-
   <div class="field">
-  <label for="name">Name</label>
-  <input id="product_name" type="text" name="name">
-</div>
+    <%= form.label :description %><br>
+    <%= form.text_area :description %>
+  </div>
 
-<div class="field">
-  <%= form.label :description %><br>
-  <%= form.text_area :description %>
-</div>
 
-<div class="actions">
-  <%= form.submit %>
-</div>
 
 
 
@@ -44,17 +36,17 @@
   </div>
 
   <div class="field">
-  <%= form.label :color %><br>
-  <%= form.text_field :color %>
-</div>
+    <%= form.label :color %><br>
+    <%= form.text_field :color %>
+  </div>
 
-<div class="field">
-<%= form.label :price %><br>
-<%= form.text_field :price %>
-</div>
+  <div class="field">
+    <%= form.label :price %><br>
+    <%= form.text_field :price %>
+  </div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
 
-<% end %>
+  <% end %>
