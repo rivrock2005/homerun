@@ -1,6 +1,6 @@
 body {
 
-  color: #333;
+  color: white;
   margin: 33px;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -8,6 +8,15 @@ body {
   background-image: image-url('river.jpg');
   background-repeat: no-repeat;
   background-size: 100%;
+}
+
+.list-group-item {
+  color: black;
+}
+
+h1 {
+  color: red;
+  text-align: center;
 }
 
 p {
@@ -40,8 +49,10 @@ pre {
 a {
   color: #000;
 
-  &:visited {
-    color: #666;
+  
+
+  &:visited{
+    color: red;
   }
 
   &:hover {
@@ -99,6 +110,7 @@ div {
 
 label {
   display: block;
+  color: white;
 }
 
 .navbar-expand-lg {
@@ -111,4 +123,8 @@ label {
   float: left;
   margin: 5px;
   color: black;
+  }
+
+  .signin {
+    color: white;
   }
