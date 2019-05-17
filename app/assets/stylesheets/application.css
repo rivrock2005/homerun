@@ -17,3 +17,7 @@
   max-width: 50%;
   height: auto;
 }
+
+a {
+  color: red !important;
+}

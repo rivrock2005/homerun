@@ -29,7 +29,7 @@ p {
 footer {
   position: absolute;
   left: 0px;
-  bottom: -25px;
+  bottom: -20px;
   color: white;
 
 }
@@ -49,10 +49,8 @@ pre {
 a {
   color: #000;
 
-  
-
   &:visited{
-    color: red;
+    color: black;
   }
 
   &:hover {
