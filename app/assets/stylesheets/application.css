@@ -25,3 +25,7 @@ a {
 input[type=submit].btn-block {
   width: 12% !important;
 }
+
+.alert {
+  color: red !important;
+}
