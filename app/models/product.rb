@@ -1,5 +1,6 @@
 class Product < ApplicationRecord
 	has_many :orders
+	has_many :comments
 
 	validates :image_url, allow_blank: true, format: {
 		with: %r{\.gif|jpg|png}i,
@@ -12,6 +13,11 @@ class Product < ApplicationRecord
 		else Rails.env.production?
 			Product.where("name ilike ?", "%#{search_term}%")
 		end
+
+		def highest_rating_comment
+  comments.rating_desc.first
+end
+
 	end
 
 end
