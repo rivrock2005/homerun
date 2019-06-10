@@ -13,11 +13,14 @@ class Product < ApplicationRecord
 		else Rails.env.production?
 			Product.where("name ilike ?", "%#{search_term}%")
 		end
+	end
 
-		def highest_rating_comment
-  comments.rating_desc.first
-end
+	def highest_rating_comment
+  	comments.rating_desc.first
+	end
 
+	def lowest_rating_comment
+		comments.rating_asc.first
 	end
 
 end
