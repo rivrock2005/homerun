@@ -3,7 +3,7 @@
 
   # GET /products
   # GET /products.json
-  
+
   def index
     if params[:q]
       search_term = params[:q]
@@ -16,6 +16,7 @@
   # GET /products/1
   # GET /products/1.json
   def show
+    @comments = @product.comments.order("created_at DESC")
   end
 
   # GET /products/new

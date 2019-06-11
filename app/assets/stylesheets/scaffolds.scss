@@ -26,13 +26,7 @@ p {
   color: white;
 }
 
-footer {
-  position: absolute;
-  left: 0px;
-  bottom: -20px;
-  color: white;
 
-}
 
 ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
@@ -125,4 +119,11 @@ label {
 
   .signin {
     color: white;
+  }
+
+  .copyright{
+    position: relative;
+    left: 0px;
+    bottom: 0px;
+    color: pink;
   }

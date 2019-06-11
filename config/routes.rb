@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   resources :reviews
   devise_for :users
   resources :users
-  resources :products
+  resources :products do
+    resources :comments
+  end
   get 'simple_pages/about'
   get 'simple_pages/contact'
   get 'simple_pages/index'
