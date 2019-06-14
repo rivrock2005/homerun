@@ -8,6 +8,7 @@ body {
   background-image: image-url('river.jpg');
   background-repeat: no-repeat;
   background-size: 100%;
+  background-attachment: fixed;
 }
 
 .list-group-item {
@@ -124,6 +125,6 @@ label {
   .copyright{
     position: relative;
     left: 0px;
-    bottom: 0px;
-    color: pink;
+    bottom: -50px;
+    color: white;
   }
