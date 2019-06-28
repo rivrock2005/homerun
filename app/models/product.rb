@@ -25,6 +25,11 @@ class Product < ApplicationRecord
 		comments.rating_asc.first
 	end
 
+	def Product_average_rating
+		comments.rating_desc.first
+
+	end
+
 
 
 
