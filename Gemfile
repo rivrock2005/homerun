@@ -72,3 +72,5 @@ gem 'will_paginate', '~> 3.1', '>= 3.1.7'
 gem 'rails-controller-testing'
 
 gem "factory_bot_rails", "~> 4.0"
+
+gem 'stripe'
