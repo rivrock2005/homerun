@@ -20,10 +20,12 @@
   <%= @product.price%>
 </p>
 
-<%= form_with(url: '/payments/create') do |form| %>
-  <%= render partial: "shared/stripe_checkout_button" %>
-  <%= hidden_field_tag(:parent_id, "5") %>
-<% end %>
+<% if user_signed_in? %>
+    <%= form_with(url: '/payments/create') do |form| %>
+      <%= hidden_field_tag(:product_id, @product.id) %>
+      <%= render partial: "shared/stripe_checkout_button" %>
+    <% end %>
+ <% end %>
 
 
 <img><%= image_tag(@product.image_url, class: "img-responsive center")if @product.image_url.present?%></img>

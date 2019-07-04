@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :orders, only: [:index, :show, :create, :destroy]
   post 'simple_pages/thank_you'
-
+  post '/payments/create'
+  get "simple_pages/payment_thank_you"
 
 end

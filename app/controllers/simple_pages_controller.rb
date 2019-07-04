@@ -12,7 +12,10 @@ class SimplePagesController < ApplicationController
   def Products
   end
 
-#   def thank_you
+  def payment_thank_you
+    
+  end
+    #   def thank_you
 #   @name = params[:name]
 #   @email = params[:email]
 #   @message = params[:message]
