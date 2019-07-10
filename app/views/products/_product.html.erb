@@ -4,10 +4,12 @@
       <div class="card-body">
         <a href="#"><h5 class="card-title"><%= link_to product.name, product %></h5></a>
       </div>
+      <% cache product do %>
       <ul class="list-group list-group-flush">
         <li class="list-group-item"><%= product.description %></li>
         <li class="list-group-item"><%= product.color %></li>
         <li class="list-group-item"><strong><%= number_to_currency(product.price, class:"price")%></strong></li>
       </ul>
+      <% end%>
     </div>
   </div>
