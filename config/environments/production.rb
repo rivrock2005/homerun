@@ -5,14 +5,14 @@ Rails.application.configure do
   config.cache_classes = true
 
   config.cache_store = :mem_cache_store,
-                    (ENV["MEMCACHIER_SERVERS"] || "").split(","),
-                    {:username => ENV["MEMCACHIER_USERNAME"],
-                     :password => ENV["MEMCACHIER_PASSWORD"],
-                     :failover => true,
-                     :socket_timeout => 1.5,
-                     :socket_failure_delay => 0.2,
-                     :down_retry_delay => 60
-                    }
+  (ENV["MEMCACHIER_SERVERS"] || "").split(","),
+  {:username => ENV["MEMCACHIER_USERNAME"],
+    :password => ENV["MEMCACHIER_PASSWORD"],
+    :failover => true,
+    :socket_timeout => 1.5,
+    :socket_failure_delay => 0.2,
+    :down_retry_delay => 60
+  }
 
 
   # Eager load code on boot. This eager loads most of Rails and
@@ -104,6 +104,8 @@ Rails.application.configure do
     config.logger    = ActiveSupport::TaggedLogging.new(logger)
   end
 
-  # Do not dump schema after migrations.
+  config.web_socket_server_url = "wss://ashton2.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = ['https://ashton2.herokuapp.com', 'http://ashton2.herokuapp.com']
+
 
 end

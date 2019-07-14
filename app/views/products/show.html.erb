@@ -36,5 +36,6 @@
 <% @product.highest_rating_comment %>
 <%= render 'new_comment' %>
 <p style="font-family: Lora;">Average Rating: <div class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></div></p>
+<div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
 <%= render 'comments' %>
 <%= will_paginate @comments %>
