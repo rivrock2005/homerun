@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :users
   resources :products do
     resources :comments
-  mount ActionCable.server => '/cable'
+  
   end
   get 'simple_pages/about'
   get 'simple_pages/contact'
@@ -15,5 +15,6 @@ Rails.application.routes.draw do
   post 'simple_pages/thank_you'
   post '/payments/create'
   get "simple_pages/payment_thank_you"
+  mount ActionCable.server => '/cable'
 
 end
