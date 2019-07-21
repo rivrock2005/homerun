@@ -15,14 +15,12 @@ App.product = App.cable.subscriptions.create("ProductChannel", {
     refreshRating();
   },
 
-listen_to_comments: function() {
-  return this.perform('listen', {
-    product_id: $("[data-product-id]").data("product-id")
-  });
-}
-
-$(document).on('turbolinks:load', function() {
-  App.product.listen_to_comments();
+  listen_to_comments: function() {
+    return this.perform('listen',
+      {product_id: $("[data-product-id]").data("product-id")});
+  }
 });
 
+$(document).on('turbolinks:load', function () {
+  App.product.listen_to_comments();
 });
