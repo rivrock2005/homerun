@@ -1,21 +1,15 @@
 class OrdersController < ApplicationController
+  before_action :authenticate_user!
+  load_and_authorize_resource
 
+  # GET /orders
   def index
     @orders = Order.includes(:product).all
-
-    end
-
-    def show
-      @order = Order.find(params[:id])
-      before_action :authenticate_user!
-    end
-
-    def new
-    end
-
-    def create
-    end
-
-    def destroy
-    end
   end
+
+  # GET /orders/1
+  def show
+    @order = Order.find(params[:id])
+  end
+
+end

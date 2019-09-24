@@ -30,7 +30,9 @@ class Product < ApplicationRecord
 
 	end
 
-
+	def views
+		$redis.get("product:#{id}")
+	end
 
 
 end
